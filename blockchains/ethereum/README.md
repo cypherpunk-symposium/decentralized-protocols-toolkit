@@ -120,5 +120,5 @@
 * **[resources for mev on ethereum](https://github.com/autistic-symposium/mev-toolkit/tree/main/MEV_by_chains/MEV_on_Ethereum)**
 * **[ef's ethereum protocol wiki](https://epf.wiki/#/)**
 * **[ethereum transaction visualizer](https://github.com/naddison36/tx2uml)**
-
+* **[understanding rollups, by barnabe](https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r)**
  
