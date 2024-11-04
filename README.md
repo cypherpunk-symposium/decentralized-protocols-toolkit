@@ -1,51 +1,11 @@
-# notes and resources on protocol economy
+## ⛓🧱 decentralized protocols toolkit
 
 <br>
 
 
-## 🛵 design
-
-### proposer-builder separation
-
-* [notes on pbs, by barnabe.eth](https://barnabe.substack.com/p/pbs)
-  - thoughts on in-protocol pbs, market structure and allocation mechanism, whole vs. partial block building, block vs. slot auctions, inclusion lists, capturing true pbs value via consensus bid and protocol capture.
-  
-* [decentralizing the builder role, by j. charbonneau](https://joncharbonneau.substack.com/p/decentralizing-the-builder-role)
-
-
-<br>
-
-### eip-1559
-
-* [transaction fee mechanism design for ethereum, by tim roughgarden](https://timroughgarden.org/papers/eip1559.pdf)
-  - thoughts on how eip-1559 proposes a major change to ethereum's transaction fee mechanism, the market for ethereum transactions, incentive-compatible transaction fee mechanisms, and alternative designs.
-
-* [congestion control and eip1559, by barnabe.eth](https://barnabe.substack.com/p/congestion-control-and-eip1559)
-
-<br>
-
-### mev-smoothing
-
-* [burning mev through block proposer auctions, by domothy](https://ethresear.ch/t/burning-mev-through-block-proposer-auctions/14029)
-
-
-<br>
-
-### algorithmic game theory
-
-* [algorithmic game theory, by tim roughgarden](https://theory.stanford.edu/~tim/papers/cacm.pdf)
-
-
-<br>
-
-### inclusion lists
-
-* [inclusion list economics](https://efdn.notion.site/Inclusion-list-economics-b0d61d0e21a74963a54448e48d9adc8a)
-
-
-<br>
-
-## 👾 resources
-
-* [CADlabs's ethereum economic model](https://github.com/CADLabs/ethereum-economic-model)
+* ⬛️ **[blockchains 101](blockchains)**
+* ⬛️ **[ethereum](blockchains/ethereum)**
+* ⬛️ **[consensus](consensus)**
+* ⬛️ **[cryptoeconomics](cryptoeconomics)**
+* ⬛️ **[data availability](data_availability)**
 
