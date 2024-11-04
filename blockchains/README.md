@@ -39,5 +39,9 @@
 * **[on a rusty sparse merkle tree experiment, by bt3gl](https://mirror.xyz/go-outside.eth/zX1BaGZLHAcQOKdhFnSSM0VW67_-OFCi5ZegGFPryvg)**
 * **[on uploading your soul to the interplanetary sys, by bt3gl](https://mirror.xyz/go-outside.eth/A3iJGhXTJI5fgQoZVgIu3ovPV1P8zrxigpwngm0n4I0)**
 * **[understanding trie databases, by d. brickwood](https://medium.com/shyft-network/understanding-trie-databases-in-ethereum-9f03d2c3325d)**
+* **[authenticated data structures as a library](https://bentnib.org/posts/2016-04-12-authenticated-data-structures-as-a-library.html)**
+* **[authenticated data structures, generically](https://www.cs.umd.edu/~mwh/papers/gpads.pdf)**
+* **[optimizing sparse merkle trees](https://ethresear.ch/t/optimizing-sparse-merkle-trees/3751)**
+  
 
 
