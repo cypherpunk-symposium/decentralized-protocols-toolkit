@@ -121,4 +121,5 @@
 * **[ef's ethereum protocol wiki](https://epf.wiki/#/)**
 * **[ethereum transaction visualizer](https://github.com/naddison36/tx2uml)**
 * **[understanding rollups, by barnabe](https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r)**
- 
+ * **[rollups are not real, by j. charbonneau](https://joncharbonneau.substack.com/p/rollups-arent-real)**
+
