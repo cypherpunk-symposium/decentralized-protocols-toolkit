@@ -4,7 +4,6 @@
 
 
 ### game theory
-
 * **[columbia cryptoeconomics workshop 2022](https://www.youtube.com/playlist?list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe)**
 * **[standford class on game theory](https://www.coursera.org/learn/game-theory-1#syllabus) and [advanced course](https://www.coursera.org/learn/game-theory-2)**
 * **[finding pure strategy nash equilibrium in finite simultaneous games](https://www.youtube.com/watch?v=gINERi_wbbg)**
@@ -21,3 +20,4 @@
 * **[protocol economics: the ethereum protocol’s perspective, by vub](https://hackmd.io/@vbuterin/mev_presentation_3#/)**
 * **[a16z menagerie of auction mechanisms implemented in solidity](https://github.com/a16z/auction-zoo)**
 * **[on some results and challenges in cryptoeconomics, by t. roughgarden](https://www.youtube.com/watch?v=hMbXH3SdWd4)**
+* **[centralization in attester-proposer separation, m. pai and m. resnick](https://arxiv.org/pdf/2408.03116)**
