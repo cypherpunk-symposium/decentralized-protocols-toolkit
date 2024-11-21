@@ -2,7 +2,20 @@
 
 <br>
 
+### chapters
+
+<br>
+
+* **[ethereum](ethereum)**
+* **[bitcoin](bitcoin)**
+
+<br>
+
+---
+
 ### tl; dr
+
+<br>
 
 * **in general, blockchains have four core functions** (although modular blockchains specialize in one or two):
   * execution: transaction execution and state update.
@@ -43,5 +56,4 @@
 * **[authenticated data structures, generically](https://www.cs.umd.edu/~mwh/papers/gpads.pdf)**
 * **[optimizing sparse merkle trees](https://ethresear.ch/t/optimizing-sparse-merkle-trees/3751)**
   
-
 
