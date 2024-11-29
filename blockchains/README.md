@@ -55,5 +55,6 @@
 * **[authenticated data structures as a library](https://bentnib.org/posts/2016-04-12-authenticated-data-structures-as-a-library.html)**
 * **[authenticated data structures, generically](https://www.cs.umd.edu/~mwh/papers/gpads.pdf)**
 * **[optimizing sparse merkle trees](https://ethresear.ch/t/optimizing-sparse-merkle-trees/3751)**
+* **[revisiting the world computer, by l. yang et al.](https://user.fm/files/v2-261b7914c204931fbf213d7d35307264/worldcomputer.pdf)**
   
 
