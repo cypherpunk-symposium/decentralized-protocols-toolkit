@@ -44,17 +44,30 @@
 
 <br>
 
-* **[celestia's namespaced merkle tree](https://github.com/celestiaorg/nmt)**
-* **[jellyfish merkle tree, by z. gao et al.](https://developers.diem.com/papers/jellyfish-merkle-tree/2021-01-14.pdf?ref=127.0.0.1)**
-* **[leaves of hash, by trail of bits](https://blog.trailofbits.com/2019/06/17/leaves-of-hash/)**
-* **[how merkle trees work, by consensys](https://media.consensys.net/ever-wonder-how-merkle-trees-work-c2f8b7100ed3)**
+#### cool learning
+
+* **[authenticated data structures, generically (2014)](https://www.cs.umd.edu/~mwh/papers/gpads.pdf)**
+* **[authenticated data structures as a library (2016)](https://bentnib.org/posts/2016-04-12-authenticated-data-structures-as-a-library.html)**
+* **[understanding trie databases, by d. brickwood (2018)](https://medium.com/shyft-network/understanding-trie-databases-in-ethereum-9f03d2c3325d)**
+* **[optimizing sparse merkle trees (2018)](https://ethresear.ch/t/optimizing-sparse-merkle-trees/3751)**
+* **[leaves of hash, by trail of bits (2019)](https://blog.trailofbits.com/2019/06/17/leaves-of-hash/)**
+* **[jellyfish merkle tree, by z. gao et al. (2021)](https://developers.diem.com/papers/jellyfish-merkle-tree/2021-01-14.pdf?ref=127.0.0.1)**
+* **[on uploading your soul to the interplanetary sys, by bt3gl (2023)](https://mirror.xyz/go-outside.eth/A3iJGhXTJI5fgQoZVgIu3ovPV1P8zrxigpwngm0n4I0)**
+* **[on a rusty sparse merkle tree experiment, by bt3gl (2023)](https://mirror.xyz/go-outside.eth/zX1BaGZLHAcQOKdhFnSSM0VW67_-OFCi5ZegGFPryvg)**
+* **[how merkle trees work, by consensys (2024)](https://media.consensys.net/ever-wonder-how-merkle-trees-work-c2f8b7100ed3)**
+
+<br>
+
+#### cool tools
+
 * **[bitcoin memory pool](https://www.blockchain.com/explorer/mempool/btc)**
-* **[on a rusty sparse merkle tree experiment, by bt3gl](https://mirror.xyz/go-outside.eth/zX1BaGZLHAcQOKdhFnSSM0VW67_-OFCi5ZegGFPryvg)**
-* **[on uploading your soul to the interplanetary sys, by bt3gl](https://mirror.xyz/go-outside.eth/A3iJGhXTJI5fgQoZVgIu3ovPV1P8zrxigpwngm0n4I0)**
-* **[understanding trie databases, by d. brickwood](https://medium.com/shyft-network/understanding-trie-databases-in-ethereum-9f03d2c3325d)**
-* **[authenticated data structures as a library](https://bentnib.org/posts/2016-04-12-authenticated-data-structures-as-a-library.html)**
-* **[authenticated data structures, generically](https://www.cs.umd.edu/~mwh/papers/gpads.pdf)**
-* **[optimizing sparse merkle trees](https://ethresear.ch/t/optimizing-sparse-merkle-trees/3751)**
-* **[revisiting the world computer, by l. yang et al.](https://user.fm/files/v2-261b7914c204931fbf213d7d35307264/worldcomputer.pdf)**
+* **[celestia's namespaced merkle tree](https://github.com/celestiaorg/nmt)**
+
+<br>
+
+#### cool discussions
+
+* **[revisiting the world computer, by l. yang et al. (2024)](https://user.fm/files/v2-261b7914c204931fbf213d7d35307264/worldcomputer.pdf)**
+* **[dba's journey towards ethereum's north star (2024)](https://dba.xyz/ethereums-north-star/)**
   
 
