@@ -95,5 +95,5 @@
 
 <br>
 
-
+* **[what's going into the pectra upgrade?, by c. kim (2024)](https://www.youtube.com/watch?v=ufIDBCgdGwY)**
   
