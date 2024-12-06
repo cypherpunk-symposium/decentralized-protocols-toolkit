@@ -15,7 +15,7 @@
 
 ---
 
-### tl; drs
+### tl; dr
 
 <br>
 
@@ -111,15 +111,26 @@
 
 <br>
 
-* **[what are rollups, by ef](https://ethereum.org/en/developers/docs/scaling/zk-rollups/)**
-* **[upgrading ethereum book, by b. edgington](https://eth2book.info/bellatrix/)**
-* **[an incomplete guide to rollups, by vub](https://vitalik.ca/general/2021/01/05/rollup.html)**
-* **[validity rollups on bitcoin, by j. light](https://bitcoinrollups.org/)**
-* **[covenants, by bitcoin optech](https://bitcoinops.org/en/topics/covenants/)**
-* **[a rollup-centric ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)**
-* **[resources for mev on ethereum](https://github.com/autistic-symposium/mev-toolkit/tree/main/MEV_by_chains/MEV_on_Ethereum)**
-* **[ef's ethereum protocol wiki](https://epf.wiki/#/)**
+#### cool readings on ethereum protocol
+
+* **[how long non-finality could kill ethereum, by dapplion (2024)](https://www.youtube.com/watch?v=z2jafwPFLaQ)**
+* **[ef's ethereum protocol wiki (2024)](https://epf.wiki/#/)**
+* **[upgrading ethereum book, by b. edgington (2023)](https://eth2book.info/)**
+
+<br>
+
+#### cool readings on rollups
+
+
+* **[what are rollups, by ef (2024)](https://ethereum.org/en/developers/docs/scaling/zk-rollups/)**
+* **[rollups are not real, by j. charbonneau (2023)](https://joncharbonneau.substack.com/p/rollups-arent-real)**
+* **[understanding rollups, by barnabe (2022)](https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r)**
+* **[an incomplete guide to rollups, by vub (2021)](https://vitalik.ca/general/2021/01/05/rollup.html)**
+* **[a rollup-centric ethereum roadmap (2020)](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)**
+
+<br>
+
+#### cool tools
+
 * **[ethereum transaction visualizer](https://github.com/naddison36/tx2uml)**
-* **[understanding rollups, by barnabe](https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r)**
- * **[rollups are not real, by j. charbonneau](https://joncharbonneau.substack.com/p/rollups-arent-real)**
 
