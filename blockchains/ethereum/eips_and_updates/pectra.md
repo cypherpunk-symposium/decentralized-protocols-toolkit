@@ -2,7 +2,7 @@
 
 <br>
 
-#### ✅🔐🏋🏻‍♀️ **[eip-2537: precompile for bls12-381 curve operations, by a. vlasov et al.](https://eips.ethereum.org/EIPS/eip-2537)**
+### ✅🔐🏋🏻‍♀️ **[eip-2537: precompile for bls12-381 curve operations, by a. vlasov et al.](https://eips.ethereum.org/EIPS/eip-2537)**
 
 <br>
 
@@ -19,7 +19,7 @@
 
 ---
 
-#### ✅🔐🤝🏋🏻‍♀️ **[eip-6110: supply validator deposits on chain, by m. kalinin et al.](https://eips.ethereum.org/EIPS/eip-6110)**
+### ✅🔐🤝🏋🏻‍♀️ **[eip-6110: supply validator deposits on chain, by m. kalinin et al.](https://eips.ethereum.org/EIPS/eip-6110)**
 
 <br>
 
@@ -35,7 +35,7 @@
 
 ---
 
-#### ✅🔐🤝🏋🏻‍♀️ **[eip-7002: execution layer triggerable exits, by djrtwo et al.](https://eips.ethereum.org/EIPS/eip-7002)**
+### ✅🔐🤝🏋🏻‍♀️ **[eip-7002: execution layer triggerable exits, by djrtwo et al.](https://eips.ethereum.org/EIPS/eip-7002)**
 
 <br>
 
@@ -59,7 +59,7 @@
 
 ---
 
-#### ✅🔐🤝 **[eip-7251: increase the `MAX_EFFECTIVE_BALANCE`, by m. neuder et al.](https://eips.ethereum.org/EIPS/eip-7251)**
+### ✅🔐🤝 **[eip-7251: increase the `MAX_EFFECTIVE_BALANCE`, by m. neuder et al.](https://eips.ethereum.org/EIPS/eip-7251)**
 
 <br>
 
@@ -78,7 +78,7 @@
 
 ---
 
-#### ✅🔐🤝 **[eip-7549: move committee index outside attestation, by dapplion](https://eips.ethereum.org/EIPS/eip-7549)**
+### ✅🔐🤝 **[eip-7549: move committee index outside attestation, by dapplion](https://eips.ethereum.org/EIPS/eip-7549)**
 
 <br>
 
@@ -94,7 +94,7 @@
 
 ---
 
-#### ✅🔐🤝🏋🏻‍♀️ **[eip-7702: set eoa account code, by vub et al.](https://eips.ethereum.org/EIPS/eip-7702)**
+### ✅🔐🤝🏋🏻‍♀️ **[eip-7702: set eoa account code, by vub et al.](https://eips.ethereum.org/EIPS/eip-7702)**
 
 <br>
 
@@ -127,9 +127,27 @@
 
 <br>
 
+#### main security challenges: full account abstraction introduces ddos vectors
+
+- the main challenges are efficient block building and DoS-resilient p2p mempool (unused gas as a vector can become a side channel attack)
+- example:
+    1. suppose an attack implement an attacker and this account depends on a flag stored in a singleton smart contract
+    2. every account using this implementation looks at the same flag to determine the transaction validity (and also flips the flag)
+    3. the attacker then sends thousands of such transactions, and every time such transaction gets included, it immediately invalidates all the other ones, so they can't be included in the chain and need to be dropped without paying gas (since they are not valid)
+    4. this can escalate to a point where the nodes cannot do any useful work
+- the mitigation can done by separating validation from execution so that the mempool protocol only propagates compliant transactions
+- block builders must be able to validate each transaction independently (parallelizing their validation)
+  - if validation accessible data overlaps, transactions can invalidate each other causing another DoS attack vector is the mempool is filled with mutually exclusive txs
+ 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/f273e78f-1f51-41c4-adbb-3e2ec48ce630" width="80%"/>
+</p>
+
+<br>
+
 ---
 
-#### ✅🏋🏻‍♀️ **[eip-7685: general purpose execution layer requests, by lightclient](https://eips.ethereum.org/EIPS/eip-7685)**
+### ✅🏋🏻‍♀️ **[eip-7685: general purpose execution layer requests, by lightclient](https://eips.ethereum.org/EIPS/eip-7685)**
 
 <br>
 
@@ -146,7 +164,7 @@
 
 ---
 
-#### ✅🏋🏻‍♀️ **[eip-2935: save historical block hashes from state, by vub et al.](https://eips.ethereum.org/EIPS/eip-2935)**
+### ✅🏋🏻‍♀️ **[eip-2935: save historical block hashes from state, by vub et al.](https://eips.ethereum.org/EIPS/eip-2935)**
 
 <br>
 
@@ -162,7 +180,7 @@
 
 ---
 
-#### ✅ **[eip-7692: evm object format meta, by a. beregszaszi et al.](https://eips.ethereum.org/EIPS/eip-7692)**
+### ✅ **[eip-7692: evm object format meta, by a. beregszaszi et al.](https://eips.ethereum.org/EIPS/eip-7692)**
 
 <br>
 
@@ -210,7 +228,7 @@
 
 ---
 
-#### ✅🤝🏋🏻‍♀️ **[eip-7742: uncouple blob count between cl and el, by a. stokes](https://eips.ethereum.org/EIPS/eip-7742)**
+### ✅🤝🏋🏻‍♀️ **[eip-7742: uncouple blob count between cl and el, by a. stokes](https://eips.ethereum.org/EIPS/eip-7742)**
 
 <br>
 
@@ -221,7 +239,7 @@
 
 ---
 
-#### ✅🤝 **[eip-7594: peerdas - peer data availability sampling, by djrtwo et al.](https://eips.ethereum.org/EIPS/eip-7594)**
+### ✅🤝 **[eip-7594: peerdas - peer data availability sampling, by djrtwo et al.](https://eips.ethereum.org/EIPS/eip-7594)**
 
 <br>
 
@@ -233,7 +251,7 @@
 
 ---
 
-#### 🟡 **[eip-7623: increase calldata cost, by t. wahrstätter et al.](https://eips.ethereum.org/EIPS/eip-7623)**
+### 🟡 **[eip-7623: increase calldata cost, by t. wahrstätter et al.](https://eips.ethereum.org/EIPS/eip-7623)**
 
 <br>
 
@@ -244,7 +262,7 @@
 
 ---
 
-#### 🟡 **[eip-7762: increase `MIN_BASE_FEE_PER_BLOB_GAS`, by m. resnick](https://eips.ethereum.org/EIPS/eip-7762)**
+### 🟡 **[eip-7762: increase `MIN_BASE_FEE_PER_BLOB_GAS`, by m. resnick](https://eips.ethereum.org/EIPS/eip-7762)**
 
 <br>
 
