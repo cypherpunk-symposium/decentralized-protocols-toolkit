@@ -6,13 +6,14 @@
 
 <br>
 
-  - adds bls signature verification and operations over bls12-381, a cryptographic primitive allowing to get 120+ bits of security for operations over pairing friendly curve compared to the existing bn254 precompile that only provides 80 bits of security
+  - adds bls signature verification and operations over `bls12-381`, a cryptographic primitive allowing to get `120+` bits of security for operations over pairing friendly curve (compared to the existing `bn254` precompile that only provides `80` bits of security)
     
 <p align="center">
 <img src="https://github.com/user-attachments/assets/8107c4b3-5bd0-4a79-b1eb-4eb6c771c022" width="80%"/>
 </p>
 
-  - ddos protection: *a sane implementation of this eip should not contain potential infinite loops (it is possible and not even hard to implement all the functionality without while loops) and the gas schedule accurately reflects the time spent on computations of the corresponding function (precompiles pricing reflects an amount of gas consumed in the worst case where such a case exists)*
+  - ddos protection:
+    - *a sane implementation of this eip should not contain potential infinite loops (it is possible and not even hard to implement all the functionality without while loops) and the gas schedule accurately reflects the time spent on computations of the corresponding function (precompiles pricing reflects an amount of gas consumed in the worst case where such a case exists)*
 
 <br>
 
@@ -39,14 +40,20 @@
 <br>
 
   - improves ux for validators, giving them more flexibility
-  - allows validators to trigger exits and partial withdrawals via their el (0x01) withdrawal credentials (e.g., enabling more trustless staking pool designs)
+  - allows validators to trigger exits and partial withdrawals via their el (`0x01`) withdrawal credentials (e.g., enabling more trustless staking pool designs)
   - these new execution layer exit messages are appended to the el block and then processed by the cl
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/e0b79fb2-4665-4ac2-8adf-bf455773df16" width="80%"/>
 </p>
 
-  - security consideration on fee overpayment: *calls to the system contract require a fee payment defined by the current contract state. overpaid fees are not returned to the caller. it is not generally possible to compute the exact required fee amount ahead of time. using an EOA to request withdrawals will always result in overpayment of fees. there is no way for an EOA to use a wrapper contract to request a withdrawal. and even if a way existed, the gas cost of returning the overage would likely be higher than the overage itself. if requesting withdrawals to an EOA through the system contract is desired, we recommend that users perform transaction simulations to estimate a reasonable fee amount to send.*
+  - security consideration on fee overpayment:
+    - *calls to the system contract require a fee payment defined by the current contract state. overpaid fees are not returned to the caller*
+    - *it is not generally possible to compute the exact required fee amount ahead of time*
+    - *using an eoa to request withdrawals will always result in overpayment of fees*
+    - *there is no way for an eoa to use a wrapper contract to request a withdrawal*
+    - *and even if a way existed, the gas cost of returning the overage would likely be higher than the overage itself*
+    - *if requesting withdrawals to an eoa through the system contract is desired, we recommend that users perform transaction simulations to estimate a reasonable fee amount to send*
 
 <br>
 
@@ -59,7 +66,13 @@
   - biggest ux improvement for validators
   - raises the validator stake limit (maximum effective balance from 32 -> 2048 eth, with reward compounding)
   - potentially can reduce the number of inactive nodes and possibly improving the network efficiency
-  - security: *proposer selection is already weighted by the ratio of their effective balance to `MAX_EFFECTIVE_BALANCE`. due to the lower probabilities, this change will slightly increase the time it takes to calculate the next proposer index*
+  - security:
+    - *proposer selection is already weighted by the ratio of their effective balance to `MAX_EFFECTIVE_BALANCE`*
+    - *due to the lower probabilities, this change will slightly increase the time it takes to calculate the next proposer index*
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/ae1c8286-ef18-457c-84ba-0df620acaf9e" width="80%"/>
+</p>
 
 <br>
 
@@ -88,7 +101,7 @@
   - add a new transaction type that adds a list of `[chain_id, address, nonce, y_parity, r, s]` authorization tuples, improving the functionality of crypto wallets by giving them smart contract properties (the so called "account abstraction")
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/e7ae1ae1-bcae-4444-8f61-c76ab60d8d9a" width="80%"/>
+<img src="https://github.com/user-attachments/assets/8dd4c850-0b5e-4ac4-b44d-2c59e2bc8968" width="80%"/>
 </p>
 
   - more usability in crypto, enhanced security features:
@@ -124,7 +137,10 @@
     - extends the execution header with a single field to store the request information
     - requests are later on exposed to the consensus layer, which then processes each one
   - more efficient way to code, test, and implement execution triggered requests such as eip-6110 and eip-7002
-  - note on "exec" concern: *"a request’s validity can often not be fully verified at the execution layer. this is why they are referred to merely as “requests”; they do not carry the authority on their own to unilaterally catalyze an action. we expect the system contracts to perform whatever validation is possible by the el and then pass it on to the cl for further validation."*
+  - note on "exec" concern:
+    - *a request’s validity can often not be fully verified at the execution layer*
+    - *this is why they are referred to merely as "requests": they do not carry the authority on their own to unilaterally catalyze an action*
+    - *we expect the system contracts to perform whatever validation is possible by the el and then pass it on to the cl for further validation*
 
 <br>
 
@@ -138,7 +154,9 @@
   - increases amount of data from past blocks that can be stored on new blocks
   - sets the stage for verkle tree
   - improves solo staking ux: enabling stateless validator clients, allowing staking nodes to run with very little hard disk space and quick sync
-  - security: *having contracts (system or otherwise) with hot update paths (branches) poses a risk of “branch” poisioning attacks where attacker could sprinkle trivial amounts of eth around these hot paths (branches). but it has been deemed that cost of attack would escalate significantly to cause any meaningful slow down of state root updates.*
+  - security:
+    - *having contracts (system or otherwise) with hot update paths (branches) poses a risk of "branch" poisioning attacks where attacker could sprinkle trivial amounts of eth around these hot paths (branches)*
+    - *but it has been deemed that cost of attack would escalate significantly to cause any meaningful slow down of state root updates*
 
 <br>
 
@@ -148,6 +166,7 @@
 
 <br>
 
+  - more zk friendly!
   - adds a bunch of evm object format for smart contract deployment and execution efficiency, including optimized code validation, better function handling, more efficient data access instructions:
     - **[eip-3540](https://eips.ethereum.org/EIPS/eip-3540)**:
       - introduces an extensive container format for the evm with a once-off validation at deploy time
@@ -165,17 +184,27 @@
       - introduces instruction for chaining function calls
     - **[eip-7480](https://eips.ethereum.org/EIPS/eip-7480)**:
       - instructions to read data section of eof container (clear separation between code and data from eof1)
+      - *accessing immutable values and contract payloads efficiently*
     - **[eip-663](https://eips.ethereum.org/EIPS/eip-663)**:
       - introduces additional instructions for manipulating the stack which allows accessing the stack at higher depths
       - the evm stack is fixed at 1024 items and most implementations keep that in memory at all times - this change increases the number of stack items accessible via single instruction
+      - *helping compilers avoid "stack too deep" errors*
     - 🔐 **[eip-7069](https://eips.ethereum.org/EIPS/eip-7069)**:
-      - introduces `EXTCALL`, `EXTDELEGATECALL`, `EXTSTATICALL`, with simplified semantics
+      - revamped `CALL` intrusctions by introducing `EXTCALL`, `EXTDELEGATECALL`, `EXTSTATICALL`, with simplified semantics
+      - *addressing gas introspection and preserving space for address space expansion*
       - security: when implemented in eof - where the `GAS` opcode and the original `CALL` operations are removed - existing out of gas attacks will be slightly more difficult, but not entirely prevented as transactions can still pass in arbitrary gas values
     - **[eip-7620](https://eips.ethereum.org/EIPS/eip-7620)**:
       - introduces `EOFCREATE` and `RETURNCONTRACT` instructions
+      - *most code introspection issues are contract creation issues*
     - 🔐 **[eip-7620](https://eips.ethereum.org/EIPS/eip-7698)**:
-      - deploys eof contracts using creation transactions 
+      - deploys eof contracts using creation transactions
+      - *how eof contracts are introduced into the blockchain*
       - security: external unverified code (e.g., check for correct price, dos)
+
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/14816acb-4679-4327-90a7-8b3a7d42c54c" width="80%"/>
+</p>
 
 <br>
 
@@ -232,4 +261,10 @@
 
 * **[what's going into the pectra upgrade?, by c. kim (2024)](https://www.youtube.com/watch?v=ufIDBCgdGwY)**
 * **[eip-7702: a technical deep dive, by lightclient (2024)](https://www.youtube.com/watch?v=_k5fKlKBWV4)**
-* **[evm object format (eof) - history and motivation, by d. ferrin](https://www.youtube.com/watch?v=X2mlptWzphc)**
+* **[exploring eip-7702, by y. weiss (2024)](https://www.youtube.com/watch?v=63Wd5mPla-M)**
+* **[native aa in pectra - combining eof, eip-7702, by a. forshtat (2024)](https://www.youtube.com/watch?v=FYanFF-yU6w)**
+* **[evm object format (eof) - history and motivation, by d. ferrin (2024)](https://www.youtube.com/watch?v=X2mlptWzphc)**
+* **[evm object format (eof) - managing the bytecode chaos, by a. murashkin (2024)](https://www.youtube.com/watch?v=WKVgCoNp39g)**
+* **[unpacking eof: applications, by n. urisevic et al. (2024)](https://www.youtube.com/watch?v=OsKyVPdpJgI)**
+* **[eip-7251, maximum effective balance overview, by p. harris (2024)](https://www.youtube.com/watch?v=EwW6dNi9VCY)**
+
