@@ -54,7 +54,7 @@
 
 <br>
 
-  - makes the aggregation of validator votes (attestation) in blocks more efficient, reducing networking load and saving node bandwith
+  - makes the aggregation of validator votes (attestation) in blocks more efficient, reducing networking load and saving node bandwidth
   - security: first block after fork, mutation over gossip (tba)
 
 <br>
@@ -80,7 +80,7 @@
 <img src="https://github.com/user-attachments/assets/3cb0f48b-88aa-4844-9a46-ede10e09837e" width="80%"/>
 </p>
 
-  - introduces a new transaction, the setcode tx, very similar to eip-1559 txs, with an addition autorization list elements ("authorizing some code to live into your account" through creating by template)
+  - introduces a new transaction, the setcode tx, very similar to eip-1559 txs, with an additional authorization list elements ("authorizing some code to live into your account" through creating by template)
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/76a0d234-61d9-4617-bc3e-e3fe8903bb40" width="80%"/>
@@ -98,7 +98,7 @@
 <br>
 
   - extends functionalities from blobs
-  - execution layer no longer verifies data blobs’s maximum value and instead gets this value dynamically from the consensus layer
+  - execution layer no longer verifies data blobs's maximum value and instead gets this value dynamically from the consensus layer
 
 <br>
 
@@ -147,8 +147,34 @@
 
 <br>
 
-  - adds a bunch of evm object format for smart contract deployment and execution efficiency
-  - includes optimized code validation, better function handling, more efficient data access instructions
+  - adds a bunch of evm object format for smart contract deployment and execution efficiency, including optimized code validation, better function handling, more efficient data access instructions:
+    - **[eip-3540](https://eips.ethereum.org/EIPS/eip-3540)**:
+      - introduces an extensive container format for the evm with a once-off validation at deploy time
+      - `magic, version, (section_kind, section_size_or_sizes)+, 0, <section contents>`
+    - **[eip-3670](https://eips.ethereum.org/EIPS/eip-3670)**:
+      - validates eof bytecode for correctness at the time of deployment
+    - **[eip-4200](https://eips.ethereum.org/EIPS/eip-4200)**:
+      - `RJUMP`, `RJUMPI`, and `RJUMPV` instructions with a signed immediate encoding the jump destination
+    - **[eip-4750](https://eips.ethereum.org/EIPS/eip-4750)**:
+      - individual sections for functions with `CALLF` and `RETF` instructions
+    - 🔐 **[eip-5450](https://eips.ethereum.org/EIPS/eip-5450)**:
+      - deploy-time validation of stack usage for eof functions
+      - security: introduces extended validation of eof code sections to guarantee that neither stack underflow nor overflow can happen during execution of validated contracts)
+    - **[eip-6206](https://eips.ethereum.org/EIPS/eip-6206)**:
+      - introduces instruction for chaining function calls
+    - **[eip-7480](https://eips.ethereum.org/EIPS/eip-7480)**:
+      - instructions to read data section of eof container (clear separation between code and data from eof1)
+    - **[eip-663](https://eips.ethereum.org/EIPS/eip-663)**:
+      - introduces additional instructions for manipulating the stack which allows accessing the stack at higher depths
+      - the evm stack is fixed at 1024 items and most implementations keep that in memory at all times - this change increases the number of stack items accessible via single instruction
+    - 🔐 **[eip-7069](https://eips.ethereum.org/EIPS/eip-7069)**:
+      - introduces `EXTCALL`, `EXTDELEGATECALL`, `EXTSTATICALL`, with simplified semantics
+      - security: when implemented in eof - where the `GAS` opcode and the original `CALL` operations are removed - existing out of gas attacks will be slightly more difficult, but not entirely prevented as transactions can still pass in arbitrary gas values
+    - **[eip-7620](https://eips.ethereum.org/EIPS/eip-7620)**:
+      - introduces `EOFCREATE` and `RETURNCONTRACT` instructions
+    - 🔐 **[eip-7620](https://eips.ethereum.org/EIPS/eip-7698)**:
+      - deploys eof contracts using creation transactions 
+      - security: external unverified code (e.g., check for correct price, dos)
 
 <br>
 
