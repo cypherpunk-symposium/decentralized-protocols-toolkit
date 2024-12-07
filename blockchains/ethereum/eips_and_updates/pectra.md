@@ -6,20 +6,29 @@
 
 <br>
 
-  - adds bls signature verification and operations over bls12-381, a cryptographic primitive allowing to get 120+ bits of security for operations 
-  - security: notes on constant time (tba)
+  - adds bls signature verification and operations over bls12-381, a cryptographic primitive allowing to get 120+ bits of security for operations over pairing friendly curve compared to the existing bn254 precompile that only provides 80 bits of security
+    
+<p align="center">
+<img src="https://github.com/user-attachments/assets/8107c4b3-5bd0-4a79-b1eb-4eb6c771c022" width="80%"/>
+</p>
+
+  - ddos protection: *a sane implementation of this eip should not contain potential infinite loops (it is possible and not even hard to implement all the functionality without while loops) and the gas schedule accurately reflects the time spent on computations of the corresponding function (precompiles pricing reflects an amount of gas consumed in the worst case where such a case exists)*
 
 <br>
 
 ---
 
-#### ✅🔐🤝🏋🏻‍♀️ **[eip-6110: supply validator deposits on chain, by m. kalinin et al.](https://eips.ethereum.org/EIPS/eip-61100)**
+#### ✅🔐🤝🏋🏻‍♀️ **[eip-6110: supply validator deposits on chain, by m. kalinin et al.](https://eips.ethereum.org/EIPS/eip-6110)**
 
 <br>
 
+  - appends validator deposits to the el block structure, shifting the responsibility of deposit inclusion and validation to the el and removes the need for deposit
   - faster for validators to deposit their eth (12 hours -> 30 min)
-  - removes the need for deposit voting from the cl, reducing the complexity of client software design
-  - security: data complexity, dos, weak subjectivity period (tba)
+  - removes the need for deposit voting from the cl, reducing the complexity of client software design, and contributing to the security of the deposits flow
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/d7dfb8cd-f496-4087-ac16-72384a2a0204" width="80%"/>
+</p>
 
 <br>
 
@@ -30,8 +39,14 @@
 <br>
 
   - improves ux for validators, giving them more flexibility
-  - allows validators to trigger exits and partial withdrawals via their execution layer withdrawal credentials (e.g., enabling more trustless staking pool designs)  
-  - security: impact on existing custody relationships, fee overpayment (tba)
+  - allows validators to trigger exits and partial withdrawals via their el (0x01) withdrawal credentials (e.g., enabling more trustless staking pool designs)
+  - these new execution layer exit messages are appended to the el block and then processed by the cl
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/e0b79fb2-4665-4ac2-8adf-bf455773df16" width="80%"/>
+</p>
+
+  - security consideration on fee overpayment: *calls to the system contract require a fee payment defined by the current contract state. overpaid fees are not returned to the caller. it is not generally possible to compute the exact required fee amount ahead of time. using an EOA to request withdrawals will always result in overpayment of fees. there is no way for an EOA to use a wrapper contract to request a withdrawal. and even if a way existed, the gas cost of returning the overage would likely be higher than the overage itself. if requesting withdrawals to an EOA through the system contract is desired, we recommend that users perform transaction simulations to estimate a reasonable fee amount to send.*
 
 <br>
 
@@ -44,7 +59,7 @@
   - biggest ux improvement for validators
   - raises the validator stake limit (maximum effective balance from 32 -> 2048 eth, with reward compounding)
   - potentially can reduce the number of inactive nodes and possibly improving the network efficiency
-  - security: attestation committees, aggregator selection, proposer selection probability, sync committee selection probability, churn invariants, fee overpayment (tba)
+  - security: *proposer selection is already weighted by the ratio of their effective balance to `MAX_EFFECTIVE_BALANCE`. due to the lower probabilities, this change will slightly increase the time it takes to calculate the next proposer index*
 
 <br>
 
@@ -55,7 +70,12 @@
 <br>
 
   - makes the aggregation of validator votes (attestation) in blocks more efficient, reducing networking load and saving node bandwidth
-  - security: first block after fork, mutation over gossip (tba)
+  - this eip introduces backward incompatible changes to the block validation rule set on the consensus layer and must be accompanied by a hard fork
+  - because the on chain `Attestation` container changes, attestations from the prior fork can't be included into post-electra blocks, therefore the first block after the fork may have zero attestations
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/837baf42-99d4-47f0-80b9-1bd19986a5a6" width="80%"/>
+</p>
 
 <br>
 
@@ -65,16 +85,16 @@
 
 <br>
 
-  - improves the functionality of crypto wallets by giving them smart contract properties (the so called "account abstraction")
+  - add a new transaction type that adds a list of `[chain_id, address, nonce, y_parity, r, s]` authorization tuples, improving the functionality of crypto wallets by giving them smart contract properties (the so called "account abstraction")
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/e7ae1ae1-bcae-4444-8f61-c76ab60d8d9a" width="80%"/>
 </p>
 
   - more usability in crypto, enhanced security features:
-    - batching (allowing multiple operations from the same user in one atomic transaction)
+    - batching multiple operations from the same user into one atomic transaction (e.g., erc-20's approval + spending)
     - sponsorship (an account can pay for a transaction on behalf of another account)
-    - privilege de-escalation (users can sign sub-keys, giving them specific permissions that are much weaker than global access to the account)
+    - privilege de-escalation where users can sign sub-keys, giving them specific permissions that are much weaker than global access to the account (e.g., a permission to spend erc-20 but not eth, or spend a percentage of balance per day, or interact only with a specific application)
    
 <p align="center">
 <img src="https://github.com/user-attachments/assets/3cb0f48b-88aa-4844-9a46-ede10e09837e" width="80%"/>
@@ -87,18 +107,10 @@
 </p>
 
   - e.g., gas fees could be outsourced to services to pay on another erc-20 token
-  - security: secure delegation, `tx.origin`, sponsored tx relayers, frontrunning initialization, tx propagation (tba)
 
-<br>
-
----
-
-#### ✅🤝🏋🏻‍♀️ **[eip-7742: uncouple blob count between cl and el, by a. stokes](https://eips.ethereum.org/EIPS/eip-7742)**
-
-<br>
-
-  - extends functionalities from blobs
-  - execution layer no longer verifies data blobs's maximum value and instead gets this value dynamically from the consensus layer
+<p align="center">
+<img src="https://github.com/user-attachments/assets/6d712fe2-309f-4ce8-bd18-b4cf253fdbac" width="80%"/>
+</p>
 
 <br>
 
@@ -122,23 +134,12 @@
 
 <br>
 
+  - store last `HISTORY_SERVE_WINDOW` historical block hashes in the storage of a system contract as part of the block processing logic
   - increases amount of data from past blocks that can be stored on new blocks
   - sets the stage for verkle tree
   - improves solo staking ux: enabling stateless validator clients, allowing staking nodes to run with very little hard disk space and quick sync
-  - security: notes on branch poisoning (tba)
+  - security: *having contracts (system or otherwise) with hot update paths (branches) poses a risk of “branch” poisioning attacks where attacker could sprinkle trivial amounts of eth around these hot paths (branches). but it has been deemed that cost of attack would escalate significantly to cause any meaningful slow down of state root updates.*
 
-<br>
-
----
-
-#### ✅🤝 **[eip-7594: peerdas - peer data availability Sampling, by djrtwo et al.](https://eips.ethereum.org/EIPS/eip-7594)**
-
-<br>
-
-  - allows beacon nodes to perform data availability sampling, improving how da is handled across the network
-  - crucial feature for layer 2s (making them more efficient and cost-effective)
-  - compare to celestia (tba)
- 
 <br>
 
 ---
@@ -180,6 +181,29 @@
 
 ---
 
+#### ✅🤝🏋🏻‍♀️ **[eip-7742: uncouple blob count between cl and el, by a. stokes](https://eips.ethereum.org/EIPS/eip-7742)**
+
+<br>
+
+  - extends functionalities from blobs
+  - execution layer no longer verifies data blobs's maximum value and instead gets this value dynamically from the consensus layer
+
+<br>
+
+---
+
+#### ✅🤝 **[eip-7594: peerdas - peer data availability sampling, by djrtwo et al.](https://eips.ethereum.org/EIPS/eip-7594)**
+
+<br>
+
+  - allows beacon nodes to perform data availability sampling, improving how da is handled across the network
+  - crucial feature for layer 2s (making them more efficient and cost-effective)
+  - compare to celestia (tba)
+ 
+<br>
+
+---
+
 #### 🟡 **[eip-7623: increase calldata cost, by t. wahrstätter et al.](https://eips.ethereum.org/EIPS/eip-7623)**
 
 <br>
@@ -208,3 +232,4 @@
 
 * **[what's going into the pectra upgrade?, by c. kim (2024)](https://www.youtube.com/watch?v=ufIDBCgdGwY)**
 * **[eip-7702: a technical deep dive, by lightclient (2024)](https://www.youtube.com/watch?v=_k5fKlKBWV4)**
+* **[evm object format (eof) - history and motivation, by d. ferrin](https://www.youtube.com/watch?v=X2mlptWzphc)**
