@@ -2,7 +2,9 @@
 
 <br>
 
-* **[the ethereum yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf)**
+
+* **[ethereum yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf)**
+* **[eips and updates](eips_and_updates)**
 * the ethereum roadmap:
 
 <br>
@@ -37,7 +39,7 @@
 
 ##### scalability
 
-* **[eip-4844 tl; dr](eip-4844.md)**
+* **[eip-4844 tl; dr](eips_and_updates/eip-4844.md)**
 * **[possible futures of the ethereum protocol, part 1: the merge, by vub](https://vitalik.eth.limo/general/2024/10/14/futures1.html)**
 * **[possible futures for the ethereum protocol, part 2: the surge, by vub](https://vitalik.eth.limo/general/2024/10/17/futures2.html)**
 
