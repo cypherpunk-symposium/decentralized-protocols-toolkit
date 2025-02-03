@@ -37,11 +37,12 @@
 
 <br>
 
-##### scalability
+##### scaling
 
 * **[eip-4844 tl; dr](eips_and_updates/eip-4844.md)**
-* **[possible futures of the ethereum protocol, part 1: the merge, by vub](https://vitalik.eth.limo/general/2024/10/14/futures1.html)**
-* **[possible futures for the ethereum protocol, part 2: the surge, by vub](https://vitalik.eth.limo/general/2024/10/17/futures2.html)**
+* **[scaling ethereum l1 and l2s in 2025 and beyond, by vub (2025)](https://vitalik.eth.limo/general/2025/01/23/l1l2future.html)**
+* **[possible futures of the ethereum protocol, part 1: the merge, by vub (2024)](https://vitalik.eth.limo/general/2024/10/14/futures1.html)**
+* **[possible futures for the ethereum protocol, part 2: the surge, by vub (2024)](https://vitalik.eth.limo/general/2024/10/17/futures2.html)**
 
 <br>
 
