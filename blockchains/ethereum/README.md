@@ -122,6 +122,7 @@
 
 #### cool readings on the protocol
 
+* **[ethereum foundation r&d teams, by nixo (2025)](https://mirror.xyz/nixo.eth/TS-GwCEAKD_UTOE2_SCA_eFWyHstVAtGGn2Hu8mMezQ)**
 * **[how long non-finality could kill ethereum, by dapplion (2024)](https://www.youtube.com/watch?v=z2jafwPFLaQ)**
 * **[ef's ethereum protocol wiki (2024)](https://epf.wiki/#/)**
 * **[upgrading ethereum book, by b. edgington (2023)](https://eth2book.info/)**
