@@ -39,14 +39,20 @@
 
 ##### scaling
 
-* **[eip-4844 tl; dr](eips_and_updates/eip-4844.md)**
+* **[native rollups - superpowers from l1 exec, by j. drake (2025)](http://ethresear.ch/t/native-rollups-superpowers-from-l1-execution/21517)**
 * **[scaling ethereum l1 and l2s in 2025 and beyond, by vub (2025)](https://vitalik.eth.limo/general/2025/01/23/l1l2future.html)**
 * **[possible futures of the ethereum protocol, part 1: the merge, by vub (2024)](https://vitalik.eth.limo/general/2024/10/14/futures1.html)**
 * **[possible futures for the ethereum protocol, part 2: the surge, by vub (2024)](https://vitalik.eth.limo/general/2024/10/17/futures2.html)**
 
 <br>
 
-##### rollups
+###### eips
+
+* **[eip-4844 tl; dr](eips_and_updates/eip-4844.md)**
+
+<br>
+
+##### rollups tl; dr
 
 * rollups move computation (and state storage) off-chain, but keep some data per tx on-chain, using compression tricks to replace data with computation wherever possible (but scalability is still limited by the data bandwidth of the underlying blockchain).
 * an onchain smart contract maintains a state root (the merkle root) of the state of the rollup.
@@ -95,15 +101,15 @@
 
 ##### proposer-builder separation
 
-* **[notes on pbs, by barnabe.eth](https://barnabe.substack.com/p/pbs)** (thoughts on in-protocol pbs, market structure and allocation mechanism, whole vs. partial block building, block vs. slot auctions, inclusion lists, capturing true pbs value via consensus bid and protocol capture)
-* **[decentralizing the builder role, by j. charbonneau](https://joncharbonneau.substack.com/p/decentralizing-the-builder-role)**
+* **[notes on pbs, by barnabe.eth (2022)](https://barnabe.substack.com/p/pbs)** (thoughts on in-protocol pbs, market structure and allocation mechanism, whole vs. partial block building, block vs. slot auctions, inclusion lists, capturing true pbs value via consensus bid and protocol capture)
+* **[decentralizing the builder role, by j. charbonneau (2022)](https://joncharbonneau.substack.com/p/decentralizing-the-builder-role)**
 
 <br>
 
 ##### inclusion lists
 
-* **[inclusion list economics](https://efdn.notion.site/Inclusion-list-economics-b0d61d0e21a74963a54448e48d9adc8a)**
-* **[eip-7547 inclusion list, by m. neuder](https://ethereum-magicians.org/t/eip-7547-inclusion-lists/17474)**
+* **[eip-7547 inclusion list, by m. neuder (2023)](https://ethereum-magicians.org/t/eip-7547-inclusion-lists/17474)**
+* **[inclusion list economics (2022)](https://efdn.notion.site/Inclusion-list-economics-b0d61d0e21a74963a54448e48d9adc8a)**
 
 <br>
 
@@ -114,7 +120,7 @@
 
 <br>
 
-#### cool readings on ethereum protocol
+#### cool readings on the protocol
 
 * **[how long non-finality could kill ethereum, by dapplion (2024)](https://www.youtube.com/watch?v=z2jafwPFLaQ)**
 * **[ef's ethereum protocol wiki (2024)](https://epf.wiki/#/)**
