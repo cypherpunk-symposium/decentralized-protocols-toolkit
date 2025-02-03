@@ -101,6 +101,7 @@
 
 ##### proposer-builder separation
 
+* **[the autistic-symposium's mev-toolkit on ethereum block building (2025)](https://github.com/autistic-symposium/mev-toolkit/blob/main/MEV_by_chains/MEV_on_Ethereum/block_builders.md)**
 * **[notes on pbs, by barnabe.eth (2022)](https://barnabe.substack.com/p/pbs)** (thoughts on in-protocol pbs, market structure and allocation mechanism, whole vs. partial block building, block vs. slot auctions, inclusion lists, capturing true pbs value via consensus bid and protocol capture)
 * **[decentralizing the builder role, by j. charbonneau (2022)](https://joncharbonneau.substack.com/p/decentralizing-the-builder-role)**
 
