@@ -277,6 +277,7 @@
 
 <br>
 
+* **[pectra retrospective at eth magickians, by t. beiko et al. (2025)](https://ethereum-magicians.org/t/pectra-retrospective/22637)**
 * **[what's going into the pectra upgrade?, by c. kim (2024)](https://www.youtube.com/watch?v=ufIDBCgdGwY)**
 * **[eip-7702: a technical deep dive, by lightclient (2024)](https://www.youtube.com/watch?v=_k5fKlKBWV4)**
 * **[exploring eip-7702, by y. weiss (2024)](https://www.youtube.com/watch?v=63Wd5mPla-M)**
@@ -285,4 +286,5 @@
 * **[evm object format (eof) - managing the bytecode chaos, by a. murashkin (2024)](https://www.youtube.com/watch?v=WKVgCoNp39g)**
 * **[unpacking eof: applications, by n. urisevic et al. (2024)](https://www.youtube.com/watch?v=OsKyVPdpJgI)**
 * **[eip-7251, maximum effective balance overview, by p. harris (2024)](https://www.youtube.com/watch?v=EwW6dNi9VCY)**
+
 
