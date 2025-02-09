@@ -39,18 +39,10 @@
 
 ##### scaling
 
-* **[native rollups - superpowers from l1 exec, by j. drake (2025)](http://ethresear.ch/t/native-rollups-superpowers-from-l1-execution/21517)**
 * **[scaling ethereum l1 and l2s in 2025 and beyond, by vub (2025)](https://vitalik.eth.limo/general/2025/01/23/l1l2future.html)**
 * **[possible futures of the ethereum protocol, part 1: the merge, by vub (2024)](https://vitalik.eth.limo/general/2024/10/14/futures1.html)**
 * **[possible futures for the ethereum protocol, part 2: the surge, by vub (2024)](https://vitalik.eth.limo/general/2024/10/17/futures2.html)**
 * **[gas limit dashboard, by t. wahrstätter](https://gaslimit.pics/)**
-
-
-<br>
-
-###### eips
-
-* **[eip-4844 tl; dr](eips_and_updates/eip-4844.md)**
 
 <br>
 
@@ -101,6 +93,17 @@
 
 <br>
 
+
+##### based rollup
+
+* **[native rollups - superpowers from l1 exec, by j. drake (2025)](http://ethresear.ch/t/native-rollups-superpowers-from-l1-execution/21517)**
+* **[based rollup and mev, by kubi mensah (2025)](https://x.com/kubimensah/status/1887876381322715146)**
+* **[truly based rollup and mev, by c. noyes (2025)](https://x.com/_charlienoyes/status/1887552361863737486)**
+* **[wtf are based rollups and preconfs?, by j. vranek (2024)](https://www.youtube.com/watch?v=j4wLhmXaZn8)**
+
+
+<br>
+
 ##### proposer-builder separation
 
 * **[the autistic-symposium's mev-toolkit on ethereum block building (2025)](https://github.com/autistic-symposium/mev-toolkit/blob/main/MEV_by_chains/MEV_on_Ethereum/block_builders.md)**
@@ -116,6 +119,11 @@
 
 <br>
 
+###### eips
+
+* **[eip-4844 tl; dr](eips_and_updates/eip-4844.md)**
+
+<br>
 
 ---
 
