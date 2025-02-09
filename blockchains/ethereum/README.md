@@ -100,6 +100,7 @@
 * **[based rollup and mev, by kubi mensah (2025)](https://x.com/kubimensah/status/1887876381322715146)**
 * **[truly based rollup and mev, by c. noyes (2025)](https://x.com/_charlienoyes/status/1887552361863737486)**
 * **[wtf are based rollups and preconfs?, by j. vranek (2024)](https://www.youtube.com/watch?v=j4wLhmXaZn8)**
+* interesting projects: **[taiko](https://taiko.xyz/)**, **[keyspace](https://docs.key.space)**, **[unifi](https://docs.puffer.fi/)** (taiko fork), **[spire labs](https://docs.spire.dev/)**, **[nuconstruct](https://nuconstruct.xyz/)**
 
 
 <br>
