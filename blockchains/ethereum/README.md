@@ -134,6 +134,7 @@
 
 #### cool readings on the protocol
 
+* **[attester-proposer separation tracker, by j. ma (2025)](https://efdn.notion.site/Attester-Proposer-Separation-Tracker-15bd9895554180c2ac75cb40878ecd33?p=18bd98955541807da881e245abb008c9&pm=s)**
 * **[ethereum foundation r&d teams, by nixo (2025)](https://mirror.xyz/nixo.eth/TS-GwCEAKD_UTOE2_SCA_eFWyHstVAtGGn2Hu8mMezQ)**
 * **[how long non-finality could kill ethereum, by dapplion (2024)](https://www.youtube.com/watch?v=z2jafwPFLaQ)**
 * **[ef's ethereum protocol wiki (2024)](https://epf.wiki/#/)**
@@ -142,7 +143,6 @@
 <br>
 
 #### cool readings on rollups
-
 
 * **[what are rollups, by ef (2024)](https://ethereum.org/en/developers/docs/scaling/zk-rollups/)**
 * **[rollups are not real, by j. charbonneau (2023)](https://joncharbonneau.substack.com/p/rollups-arent-real)**
